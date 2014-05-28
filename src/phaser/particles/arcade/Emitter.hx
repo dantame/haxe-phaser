@@ -2,6 +2,8 @@ package phaser.particles.arcade;
 
 @:native("Phaser.Particles.Arcade.Emitter")
 extern class Emitter extends phaser.core.Group {
+
+	function new(game:phaser.core.Game, ?x:Float, ?y:Float, ?maxParticles:Float);
 	
 	/**
 	 * The total number of particles in this emitter..

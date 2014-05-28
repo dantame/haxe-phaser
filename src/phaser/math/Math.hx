@@ -262,6 +262,8 @@ extern class Math {
 	 * Round down to the next whole number. E.g. floor(1.7) == 1, and floor(-2.7) == -2.
 	 */
 	function floor (Value:Float):Float;
+
+	function floorTo(value:Float, place:Int, base:Int):Float;
 	
 	/**
 	 * Round up to the next whole number.  E.g. ceil(1.3) == 2, and ceil(-2.3) == -3.

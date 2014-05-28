@@ -7,7 +7,9 @@ extern class Sprite extends phaser.pixi.display.Sprite {
 	 * A reference to the currently running Game.
 	 */
 	var game:phaser.core.Game;
-	
+
+	var alive:Bool;
+
 	/**
 	 * The user defined name given to this Sprite.
 	 */
@@ -126,7 +128,9 @@ extern class Sprite extends phaser.pixi.display.Sprite {
 	 * Internal cache var.
 	 */
 	var _bounds:phaser.geom.Rectangle;
-	
+
+	function new(game:phaser.core.Game, x:Float, y:Float, assetId:String):Void;
+
 	/**
 	 * Automatically called by World.preUpdate.
 	 */
@@ -142,6 +146,8 @@ extern class Sprite extends phaser.pixi.display.Sprite {
 	 * Internal function called by the World postUpdate cycle.
 	 */
 	function postUpdate ():Void;
+
+	function addChild(child:Dynamic):Void;
 	
 	/**
 	 * Changes the Texture the Sprite is using entirely. The old texture is removed and the new one is referenced or fetched from the Cache.
