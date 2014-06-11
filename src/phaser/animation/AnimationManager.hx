@@ -70,12 +70,12 @@ extern class AnimationManager {
 	 * Check whether the frames in the given array are valid and exist.
 	 */
 	function validateFrames (frames:Array<Dynamic>, ?useNumericIndex:Bool = true):Bool;
-	
+
 	/**
 	 * Play an animation based on the given key. The animation should previously have been added via sprite.animations.add()
 	 * If the requested animation is already playing this request will be ignored. If you need to reset an already running animation do so directly on the Animation object itself.
 	 */
-	function play (name:String, ?frameRate:Float, ?loop:Bool = false, ?killOnComplete:Bool = false):phaser.animation.Animation;
+	function play (name:String, ?frames:Dynamic = null, ?frameRate:Float, ?loop:Bool = false, ?killOnComplete:Bool = false):phaser.animation.Animation;
 	
 	/**
 	 * Stop playback of an animation. If a name is given that specific animation is stopped, otherwise the current animation is stopped.
